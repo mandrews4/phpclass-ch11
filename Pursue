@@ -1,0 +1,35 @@
+P1 Modify add_quote.php so that it confirms that the quotes.txt file exists,
+   prior to checking if it’s writable.
+
+   Make the text area in add_quote.php sticky.
+
+   Change add_quote.php so that it takes the quotation and the attribution
+   as separate inputs and writes them separately to the text file. Then
+   modify view_quote.php so that it retrieves and displays both pieces of
+   data.
+
+   Modify view_quote.php so that it displays two random quotations.
+
+   Update upload_file.php, making it confirm that the uploads directory is
+   writable.
+
+   View the PHP manual page for the glob() function to see what it can do
+   and how to use it.
+
+   Update list_dir.php to display other information about the files in a
+   directory.
+A See add_quote.php, list_dir.php & view_quote.php
+
+P2 Create a system to guarantee unique usernames in register.php. Hint:
+   Before you attempt to create the directory, use PHP to check your list
+   of existing usernames for a match to the just-registered name. If no
+   match is found, the new name is acceptable.
+
+   If the username is already in use, then PHP can create an error message
+   requesting a new username.
+A  See register.php
+
+P3 Use the combination of writing to and reading from text files, plus
+   either sessions or cookies, to create a real registration and login
+   system.
+A  See start.html, login-sys.php, register-sys.php & showtime-sys.php
