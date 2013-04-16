@@ -1,0 +1,64 @@
+Q1 What version of PHP are you running?
+A  Php 5.4.7 bundled with XAMPP
+
+Q2 What steps did you need to take to make a file or directory writable for
+   your server?
+A  I'm running XAMPP on windows, so creating a folder and using the default
+   permissions and ownership was sufficient
+
+Q3 What is the Web root directory (as a concept)? What is the Web root
+   directory for your Web site (whether on your own computer or on a live
+   server)?
+A  The web root directory indicates the root directory of files and
+   directories available to a user's browser. Any files within the root
+   directory or within directories within the web root are accessible to
+   the user's browser.
+
+   Similarly, any files and directories outside the root directory are
+   not directly accessible to the user's browser. Such files might include
+   web server database files and other sources of information that may be
+   accessed by pages within the web root.
+
+   The web root for my server is C:\xampp\htdocs.
+
+Q4 What are two ways you can write data to a file?
+A  You can use the file_put_contents() and fwrite() functions to write
+   data to a file.
+
+Q5 How do you append new data to existing files (as opposed to replacing any
+   existing data)?
+A  You can append new data to an existing file by specifying the FILE_APPEND
+   flag when invoking the file_put_contents() function or opening the file
+   using fopen with a mode that places the pointer at the end of the file,
+   before using the fwrite() function to append data to the file.
+
+Q6 How do you ensure that new data is placed on its own line?
+A  You can ensure that new data is placed on its own line by appending
+   PHP_EOL to any data that you wish to write to a file.
+
+   For example:
+
+   file_put_contents($file, "Hello World!" . PHP_EOL);
+
+Q7 In order for a form to accept file uploads, what attributes must the
+   opening form tag have?
+A  The form tag must have the 'enctype="multipart/form-data"' attribute/value
+   pair in order for it to accept file uploads.
+
+Q8 In what variable will a PHP script be able to access an uploaded file?
+   What function is used to move the file to its final destination on the
+   server?
+A  A php script can access an uploaded file in the $_FILES array.
+
+   The move_uploaded_file() function is used to move the file to its final
+   destination on the server.
+   
+Q9 How does the fgetcsv() function differ from file() or
+   file_get_contents()?
+
+A  The fgetcsv() function allows you to specify a field separator when
+   reading values from a file. The default field separator for the function
+   is the comma (,).
+
+   The file() and file_get_contents() functions read lines from a file, using
+   PHP_EOL as a field separator. 
